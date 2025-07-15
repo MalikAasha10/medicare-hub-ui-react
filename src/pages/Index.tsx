@@ -1,6 +1,11 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import heroFamily from "@/assets/hero-family.jpg";
+import aboutUs from "@/assets/about-us.jpg";
+import medicareInsurance from "@/assets/medicare-insurance.jpg";
+import autoInsurance from "@/assets/auto-insurance.jpg";
+import finalExpense from "@/assets/final-expense.jpg";
 
 const Index = () => {
   return (
@@ -9,7 +14,14 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative bg-gradient-hero text-primary-foreground py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-primary/10"></div>
+        <div className="absolute inset-0">
+          <img 
+            src={heroFamily} 
+            alt="Happy family" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-primary/60"></div>
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -72,10 +84,12 @@ const Index = () => {
               </Button>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-lg shadow-soft p-8">
-                <div className="w-full h-64 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground text-lg font-semibold">About Image</span>
-                </div>
+              <div className="bg-white rounded-lg shadow-soft overflow-hidden">
+                <img 
+                  src={aboutUs} 
+                  alt="Insurance professional" 
+                  className="w-full h-64 object-cover"
+                />
               </div>
             </div>
           </div>
@@ -94,47 +108,59 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="group hover:shadow-form transition-shadow duration-300">
-              <CardContent className="p-6">
-                <div className="w-full h-48 bg-gradient-accent rounded-lg mb-6 flex items-center justify-center">
-                  <span className="text-accent-foreground text-lg font-semibold">Medicare</span>
+              <CardContent className="p-0">
+                <img 
+                  src={medicareInsurance} 
+                  alt="Medicare Insurance" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-3">Medicare Insurance</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Medicare Insurance coverage for your peace of mind.
+                  </p>
+                  <Button variant="cta" className="w-full">
+                    Get a Quote
+                  </Button>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Medicare Insurance</h3>
-                <p className="text-muted-foreground mb-4">
-                  Medicare Insurance coverage for your peace of mind.
-                </p>
-                <Button variant="cta" className="w-full">
-                  Get a Quote
-                </Button>
               </CardContent>
             </Card>
 
             <Card className="group hover:shadow-form transition-shadow duration-300">
-              <CardContent className="p-6">
-                <div className="w-full h-48 bg-gradient-primary rounded-lg mb-6 flex items-center justify-center">
-                  <span className="text-primary-foreground text-lg font-semibold">Auto</span>
+              <CardContent className="p-0">
+                <img 
+                  src={autoInsurance} 
+                  alt="Auto Insurance" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-3">Auto Insurance</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Drive with confidence, we've got you covered.
+                  </p>
+                  <Button variant="cta" className="w-full">
+                    Get a Quote
+                  </Button>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Auto Insurance</h3>
-                <p className="text-muted-foreground mb-4">
-                  Drive with confidence, we've got you covered.
-                </p>
-                <Button variant="cta" className="w-full">
-                  Get a Quote
-                </Button>
               </CardContent>
             </Card>
 
             <Card className="group hover:shadow-form transition-shadow duration-300">
-              <CardContent className="p-6">
-                <div className="w-full h-48 bg-gradient-accent rounded-lg mb-6 flex items-center justify-center">
-                  <span className="text-accent-foreground text-lg font-semibold">Final Expense</span>
+              <CardContent className="p-0">
+                <img 
+                  src={finalExpense} 
+                  alt="Final Expense Insurance" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-3">Final Expense</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Protecting your loved ones with comprehensive coverage.
+                  </p>
+                  <Button variant="cta" className="w-full">
+                    Get a Quote
+                  </Button>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Final Expense</h3>
-                <p className="text-muted-foreground mb-4">
-                  Protecting your loved ones with comprehensive coverage.
-                </p>
-                <Button variant="cta" className="w-full">
-                  Get a Quote
-                </Button>
               </CardContent>
             </Card>
           </div>
