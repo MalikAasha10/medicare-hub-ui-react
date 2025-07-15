@@ -8,29 +8,29 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Medical/Healthcare Theme Colors */
+    /* Modern Purple/Orange Theme Colors */
     --background: 0 0% 100%;
-    --foreground: 218 84% 15%;
+    --foreground: 267 85% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 218 84% 15%;
+    --card-foreground: 267 85% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 218 84% 15%;
+    --popover-foreground: 267 85% 15%;
 
-    /* Deep Navy Blue Primary */
-    --primary: 218 84% 20%;
+    /* Deep Purple Primary */
+    --primary: 267 85% 25%;
     --primary-foreground: 0 0% 98%;
 
     /* Light Gray Secondary */
     --secondary: 210 16% 96%;
-    --secondary-foreground: 218 84% 15%;
+    --secondary-foreground: 267 85% 15%;
 
     --muted: 210 16% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Teal Accent for CTAs */
-    --accent: 174 72% 56%;
+    /* Orange Accent for CTAs */
+    --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -38,18 +38,18 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 174 72% 56%;
+    --ring: 25 95% 53%;
 
-    /* Custom Healthcare Colors */
-    --medical-blue: 218 84% 20%;
-    --medical-blue-light: 218 44% 60%;
-    --medical-teal: 174 72% 56%;
-    --medical-teal-light: 174 42% 76%;
-    --trust-blue: 210 100% 96%;
+    /* Custom Brand Colors */
+    --medical-blue: 267 85% 25%;
+    --medical-blue-light: 267 45% 60%;
+    --medical-teal: 25 95% 53%;
+    --medical-teal-light: 25 65% 73%;
+    --trust-blue: 267 100% 96%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--medical-blue-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(218 54% 30%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(267 54% 35%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--medical-teal-light)));
     
     /* Shadows */
@@ -77,39 +77,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 218 84% 6%;
+    --background: 267 85% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 218 84% 8%;
+    --card: 267 85% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 218 84% 8%;
+    --popover: 267 85% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 174 72% 56%;
-    --primary-foreground: 218 84% 6%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 267 85% 6%;
 
-    --secondary: 218 32% 18%;
+    --secondary: 267 32% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 218 32% 18%;
+    --muted: 267 32% 18%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 174 72% 56%;
-    --accent-foreground: 218 84% 6%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 267 85% 6%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 218 32% 18%;
-    --input: 218 32% 18%;
-    --ring: 174 72% 56%;
+    --border: 267 32% 18%;
+    --input: 267 32% 18%;
+    --ring: 25 95% 53%;
 
-    --medical-blue: 174 72% 56%;
-    --medical-blue-light: 174 42% 76%;
-    --medical-teal: 174 72% 56%;
-    --medical-teal-light: 174 42% 76%;
-    --trust-blue: 218 84% 12%;
+    --medical-blue: 25 95% 53%;
+    --medical-blue-light: 25 65% 73%;
+    --medical-teal: 25 95% 53%;
+    --medical-teal-light: 25 65% 73%;
+    --trust-blue: 267 85% 12%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
