@@ -1,5 +1,6 @@
 import { Phone, Mail, Twitter, Linkedin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -29,16 +30,18 @@ const Header = () => {
       <div className="bg-background border-b border-border py-4 px-4 shadow-soft">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-primary">
-              Reliance Covers
-            </h1>
+            <Link to="/">
+              <h1 className="text-2xl font-bold text-primary">
+                Reliance Covers
+              </h1>
+            </Link>
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
               Home
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">
               Services
             </a>
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
@@ -50,14 +53,16 @@ const Header = () => {
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
               Privacy Policy
             </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/contact-us" className="text-foreground hover:text-primary transition-colors font-medium">
               Contact Us
-            </a>
+            </Link>
           </nav>
 
-          <Button variant="cta" size="lg" className="hidden md:inline-flex">
-            Get A Quote
-          </Button>
+          <Link to="/contact-us">
+            <Button variant="cta" size="lg" className="hidden md:inline-flex">
+              Get A Quote
+            </Button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <Button variant="ghost" size="sm" className="md:hidden">
