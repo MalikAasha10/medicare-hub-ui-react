@@ -47,12 +47,12 @@ const Header = () => {
             <Link to="/partners" className="text-foreground hover:text-primary transition-colors font-medium">
               Partners
             </Link>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/terms-and-conditions" className="text-foreground hover:text-primary transition-colors font-medium">
               Terms And Conditions
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/privacy-policy" className="text-foreground hover:text-primary transition-colors font-medium">
               Privacy Policy
-            </a>
+            </Link>
             <Link to="/contact-us" className="text-foreground hover:text-primary transition-colors font-medium">
               Contact Us
             </Link>

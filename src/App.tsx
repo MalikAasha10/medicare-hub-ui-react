@@ -8,6 +8,8 @@ import ContactUs from "./pages/ContactUs";
 import Medicare from "./pages/Medicare";
 import Services from "./pages/Services";
 import Partners from "./pages/Partners";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/medicare" element={<Medicare />} />
           <Route path="/services" element={<Services />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
