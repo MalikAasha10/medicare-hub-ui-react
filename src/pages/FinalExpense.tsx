@@ -1,123 +1,182 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "react-router-dom";
-import { Heart, DollarSign, Users, Shield } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useState } from "react";
 
 const FinalExpense = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    zipCode: "",
+    consent: false,
+    emailConsent: false
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleCheckboxChange = (name: string, checked: boolean) => {
+    setFormData(prev => ({ ...prev, [name]: checked }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary to-primary-foreground text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Final Expense Insurance
-          </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Planning for final expenses is a crucial aspect of financial preparedness, and Reliance Covers is here to help you navigate this important area with ease and peace of mind. Our final expense insurance plans are specifically designed to cover the costs associated with funeral services, burial or cremation, medical bills, and other end-of-life expenses.
-          </p>
-          <Button size="lg" variant="secondary" asChild>
-            <Link to="/contact-us">Secure My Final Expense!</Link>
-          </Button>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Peace of Mind for Your Family</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              We understand that losing a loved one is an emotional and challenging time, and our goal is to alleviate the financial burden for your family during this difficult period. With Reliance Covers, you can ensure that your final expenses are taken care of, allowing your loved ones to focus on grieving and healing.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              One of the key advantages of choosing Reliance Covers for your final expense insurance is our commitment to personalized service and tailored coverage options. We understand that everyone's financial situation and preferences are unique, and we take the time to assess your specific needs.
-            </p>
-          </div>
-          <div className="bg-muted p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4">Get Your Quote Today</h3>
-            <p className="text-muted-foreground mb-6">
-              Our experienced agents will guide you through the process, explaining the available options and helping you select the coverage that best aligns with your wishes.
-            </p>
-            <Button asChild className="w-full">
-              <Link to="/contact-us">Get a Free Quote</Link>
-            </Button>
-          </div>
-        </div>
-
-        {/* Why Choose Us Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Final Expense With Us</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card>
-              <CardHeader className="text-center">
-                <Heart className="h-12 w-12 mx-auto text-primary mb-4" />
-                <CardTitle>Compassionate Care</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-center text-muted-foreground">
-                  We provide supportive guidance during difficult times with compassionate, understanding service.
+      <section className="py-20 bg-gradient-hero text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+                  Final Expense
+                </h1>
+                <p className="text-lg text-primary-foreground/90">
+                  Planning for final expenses is a crucial aspect of financial preparedness, and Reliance Covers is here to help you navigate this important area with ease and peace of mind. Our final expense insurance plans are specifically designed to cover the costs associated with funeral services, burial or cremation, medical bills, and other end-of-life expenses.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="text-center">
-                <DollarSign className="h-12 w-12 mx-auto text-primary mb-4" />
-                <CardTitle>Affordable Plans</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-center text-muted-foreground">
-                  Our plans are designed to be affordable and accessible without straining your budget.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="text-center">
-                <Users className="h-12 w-12 mx-auto text-primary mb-4" />
-                <CardTitle>Family Protection</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-center text-muted-foreground">
-                  Protect your loved ones from financial burden during their time of grief and loss.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="text-center">
-                <Shield className="h-12 w-12 mx-auto text-primary mb-4" />
-                <CardTitle>Comprehensive Coverage</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-center text-muted-foreground">
-                  Coverage for funeral services, burial, cremation, medical bills, and other final expenses.
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+              
+              {/* Form Card */}
+              <Card className="bg-white shadow-form">
+                <CardContent className="p-6">
+                  <h2 className="text-xl font-bold text-foreground mb-4">Fill Out the Form</h2>
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="firstName">First Name</Label>
+                        <Input
+                          id="firstName"
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="lastName">Last Name</Label>
+                        <Input
+                          id="lastName"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="phone">Phone</Label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="email">Email</Label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="zipCode">Zip Code</Label>
+                      <Input
+                        id="zipCode"
+                        name="zipCode"
+                        value={formData.zipCode}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-start space-x-2">
+                        <Checkbox
+                          id="consent"
+                          checked={formData.consent}
+                          onCheckedChange={(checked) => handleCheckboxChange("consent", checked as boolean)}
+                        />
+                        <Label htmlFor="consent" className="text-xs leading-tight">
+                          By checking this box and clicking the button below, I provide my signed written consent directly to Life Insurer Quote, Reliance Covers, and Excellence Media Group to call or text me about Final Expense and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent, even if my number is wireless, regardless of whether I am on any Federal or state DNC ('Do Not Call') list. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form).
+                        </Label>
+                      </div>
+                      
+                      <div className="flex items-start space-x-2">
+                        <Checkbox
+                          id="emailConsent"
+                          checked={formData.emailConsent}
+                          onCheckedChange={(checked) => handleCheckboxChange("emailConsent", checked as boolean)}
+                        />
+                        <Label htmlFor="emailConsent" className="text-xs">
+                          I agree to the Privacy Policy and consent to receive marketing emails from Excellence Media Group
+                        </Label>
+                      </div>
+                    </div>
+                    
+                    <Button type="submit" variant="cta" className="w-full">
+                      Secure My Final Expense!
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Additional Information */}
-        <div className="bg-muted p-8 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">Financial Security When It Matters Most</h3>
-          <p className="text-lg text-muted-foreground mb-4">
-            At Reliance Covers, we recognize that financial concerns should not add to the emotional burden of losing a loved one. Our final expense insurance plans are designed to be affordable and accessible, allowing you to secure the coverage you need without straining your budget.
-          </p>
-          <p className="text-lg text-muted-foreground mb-6">
-            We work with a network of reputable insurance providers to offer competitive rates, ensuring that you receive comprehensive coverage at a price that fits your financial goals. With Reliance Covers, you can have peace of mind knowing that your final expenses will be taken care of, providing financial security for your loved ones when they need it most.
-          </p>
-          <div className="text-center">
-            <Button size="lg" asChild>
-              <Link to="/contact-us">Start Your Application</Link>
-            </Button>
+      {/* Content Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-6">
+              <p className="text-muted-foreground leading-relaxed">
+                We understand that losing a loved one is an emotional and challenging time, and our goal is to alleviate the financial burden for your family during this difficult period. With Reliance Covers, you can ensure that your final expenses are taken care of, allowing your loved ones to focus on grieving and healing.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                One of the key advantages of choosing Reliance Covers for your final expense insurance is our commitment to personalized service and tailored coverage options. We understand that everyone's financial situation and preferences are unique, and we take the time to assess your specific needs and design a plan that meets your requirements. Our experienced agents will guide you through the process, explaining the available options and helping you select the coverage that best aligns with your wishes. We are dedicated to providing exceptional customer service, and we're always available to answer your questions and provide support.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-foreground text-center">
+                Why Choose Final Expense With Us
+              </h2>
+              <div className="text-center space-y-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  At Reliance Covers, we recognize that financial concerns should not add to the emotional burden of losing a loved one. Our final expense insurance plans are designed to be affordable and accessible, allowing you to secure the coverage you need without straining your budget. We work with a network of reputable insurance providers to offer competitive rates, ensuring that you receive comprehensive coverage at a price that fits your financial goals. With Reliance Covers, you can have peace of mind knowing that your final expenses will be taken care of, providing financial security for your loved ones when they need it most.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  In summary, Reliance Covers is your trusted partner when it comes to final expense insurance. With our tailored coverage options, personalized service, and affordable rates, we make it easy for you to plan for the future and protect your loved ones from the financial burden of final expenses. Let us assist you in creating a comprehensive plan that brings peace of mind and allows your family to focus on healing and remembrance during a difficult time.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </div>
