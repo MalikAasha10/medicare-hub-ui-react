@@ -120,7 +120,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Drive with confidence, we've got you covered.
                   </p>
-                  <Link to="/contact-us">
+                  <Link to="/auto-insurance">
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
@@ -141,7 +141,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Protecting your loved ones with comprehensive coverage.
                   </p>
-                  <Link to="/contact-us">
+                  <Link to="/final-expense">
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
@@ -162,7 +162,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Specialized in finding the perfect ACA insurance plans.
                   </p>
-                  <Link to="/contact-us">
+                  <Link to="/aca">
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>

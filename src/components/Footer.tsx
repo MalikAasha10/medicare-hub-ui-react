@@ -20,9 +20,15 @@ const Footer = () => {
               <Link to="/medicare" className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
                 Medicare
               </Link>
-              <div className="text-primary-foreground/90 text-sm">Auto Insurance</div>
-              <div className="text-primary-foreground/90 text-sm">Final Expense</div>
-              <div className="text-primary-foreground/90 text-sm">ACA</div>
+              <Link to="/auto-insurance" className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
+                Auto Insurance
+              </Link>
+              <Link to="/final-expense" className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
+                Final Expense
+              </Link>
+              <Link to="/aca" className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
+                ACA
+              </Link>
             </div>
           </div>
 
