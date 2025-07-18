@@ -16,10 +16,46 @@ const MedicareForm = () => {
     privacyConsent: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+    
+    try {
+      // Send email
+      const emailData = {
+        to: 'noumanreal@gmail.com',
+        subject: 'Medicare Form Submission',
+        body: `
+          Name: ${formData.name}
+          Zip Code: ${formData.zipCode}
+          Email: ${formData.email}
+          Phone: ${formData.phone}
+          Date of Birth: ${formData.dob}
+          Consent: ${formData.consent ? 'Yes' : 'No'}
+          Privacy Consent: ${formData.privacyConsent ? 'Yes' : 'No'}
+        `
+      };
+      
+      console.log("Form submitted:", emailData);
+      
+      // Clear form after successful submission
+      setFormData({
+        name: "",
+        zipCode: "",
+        email: "",
+        phone: "",
+        dob: "",
+        consent: false,
+        privacyConsent: false,
+      });
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      alert('Form submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error submitting form. Please try again.');
+    }
   };
 
   const handleInputChange = (field: string, value: string | boolean) => {

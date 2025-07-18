@@ -7,7 +7,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full">
+    <header className="w-full sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground py-2 px-2 sm:px-4">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm gap-2 sm:gap-0">

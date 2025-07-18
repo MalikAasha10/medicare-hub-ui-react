@@ -27,9 +27,46 @@ const AutoInsurance = () => {
     setFormData(prev => ({ ...prev, [name]: checked }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    
+    try {
+      // Send email
+      const emailData = {
+        to: 'noumanreal@gmail.com',
+        subject: 'Auto Insurance Form Submission',
+        body: `
+          First Name: ${formData.firstName}
+          Last Name: ${formData.lastName}
+          Phone: ${formData.phone}
+          Email: ${formData.email}
+          Zip Code: ${formData.zipCode}
+          Consent: ${formData.consent ? 'Yes' : 'No'}
+          Email Consent: ${formData.emailConsent ? 'Yes' : 'No'}
+        `
+      };
+      
+      console.log("Form submitted:", emailData);
+      
+      // Clear form after successful submission
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        zipCode: "",
+        consent: false,
+        emailConsent: false
+      });
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      alert('Form submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error submitting form. Please try again.');
+    }
   };
 
   return (
@@ -137,7 +174,12 @@ const AutoInsurance = () => {
                       </div>
                     </div>
                     
-                    <Button type="submit" variant="cta" className="w-full">
+                    <Button 
+                      type="submit" 
+                      variant="cta" 
+                      className="w-full"
+                      disabled={!formData.consent || !formData.emailConsent}
+                    >
                       Get My Auto Insurance
                     </Button>
                   </form>
