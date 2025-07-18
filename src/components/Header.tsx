@@ -1,8 +1,11 @@
-import { Phone, Mail, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Phone, Mail, Twitter, Linkedin, Facebook, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <header className="w-full">
       {/* Top Bar */}
@@ -66,11 +69,73 @@ const Header = () => {
             </Link>
 
             {/* Mobile Menu Button */}
-            <Button variant="ghost" size="sm" className="lg:hidden text-xs sm:text-sm px-2 sm:px-3">
-              Menu
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="lg:hidden text-xs sm:text-sm px-2 sm:px-3"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-border">
+            <nav className="flex flex-col gap-4 pt-4">
+              <Link 
+                to="/" 
+                className="text-foreground hover:text-primary transition-colors font-medium text-sm px-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/services" 
+                className="text-foreground hover:text-primary transition-colors font-medium text-sm px-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/partners" 
+                className="text-foreground hover:text-primary transition-colors font-medium text-sm px-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Partners
+              </Link>
+              <Link 
+                to="/terms-and-conditions" 
+                className="text-foreground hover:text-primary transition-colors font-medium text-sm px-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Terms And Conditions
+              </Link>
+              <Link 
+                to="/privacy-policy" 
+                className="text-foreground hover:text-primary transition-colors font-medium text-sm px-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                to="/contact-us" 
+                className="text-foreground hover:text-primary transition-colors font-medium text-sm px-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+              <div className="px-2 pt-2">
+                <Link to="/contact-us" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="cta" size="sm" className="w-full text-sm">
+                    Get A Quote
+                  </Button>
+                </Link>
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
