@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import MedicareContent from "@/components/MedicareContent";
 import MedicareForm from "@/components/MedicareForm";
+import Footer from "@/components/Footer";
 
 const Medicare = () => {
   return (
@@ -16,6 +17,7 @@ const Medicare = () => {
           </div>
         </div>
       </div>
+            <Footer />
     </div>
   );
 };
