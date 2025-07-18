@@ -27,17 +27,17 @@ const MedicareForm = () => {
   };
 
   return (
-    <div className="bg-gradient-hero p-8 rounded-lg shadow-form text-primary-foreground">
-      <h2 className="text-3xl font-bold mb-6 text-center">Fill Out the Form</h2>
+    <div className="bg-gradient-hero p-4 sm:p-6 lg:p-8 rounded-lg shadow-form text-primary-foreground h-fit sticky top-4">
+      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-center text-white">Fill Out the Form</h2>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
         <div>
           <Input
             type="text"
             placeholder="Your Name (Required)"
             value={formData.name}
             onChange={(e) => handleInputChange("name", e.target.value)}
-            className="bg-background text-foreground border-border"
+            className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
             required
           />
         </div>
@@ -48,7 +48,7 @@ const MedicareForm = () => {
             placeholder="Zip Code (Required)"
             value={formData.zipCode}
             onChange={(e) => handleInputChange("zipCode", e.target.value)}
-            className="bg-background text-foreground border-border"
+            className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
             required
           />
         </div>
@@ -59,7 +59,7 @@ const MedicareForm = () => {
             placeholder="Email Address (Required)"
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
-            className="bg-background text-foreground border-border"
+            className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
             required
           />
         </div>
@@ -70,45 +70,46 @@ const MedicareForm = () => {
             placeholder="Phone Number (Required)"
             value={formData.phone}
             onChange={(e) => handleInputChange("phone", e.target.value)}
-            className="bg-background text-foreground border-border"
+            className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
             required
           />
         </div>
 
         <div>
-          <Label className="text-primary-foreground font-medium mb-2 block">DOB</Label>
+          <Label className="text-white font-medium mb-2 block text-sm sm:text-base">DOB</Label>
           <div className="relative">
             <Input
               type="date"
+              placeholder="mm/dd/yyyy"
               value={formData.dob}
               onChange={(e) => handleInputChange("dob", e.target.value)}
-              className="bg-background text-foreground border-border"
+              className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
               required
             />
           </div>
         </div>
 
-        <div className="space-y-4 text-sm">
-          <div className="flex items-start space-x-3">
+        <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
+          <div className="flex items-start space-x-2 sm:space-x-3">
             <Checkbox
               id="consent"
               checked={formData.consent}
               onCheckedChange={(checked) => handleInputChange("consent", checked as boolean)}
-              className="mt-1"
+              className="mt-1 data-[state=checked]:bg-white data-[state=checked]:text-primary"
             />
-            <Label htmlFor="consent" className="text-primary-foreground leading-relaxed">
-              By checking this box and clicking the button below, I provide my signed written consent directly to Reliance Covers and Excellence Media Group to call or text me about Medicare and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent.
+            <Label htmlFor="consent" className="text-white leading-relaxed text-xs sm:text-sm">
+              By checking this box and clicking the button below, I provide my signed written consent directly to Reliance Covers and Excellence Media Group to call or text me about Medicare and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
             </Label>
           </div>
 
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start space-x-2 sm:space-x-3">
             <Checkbox
               id="privacy"
               checked={formData.privacyConsent}
               onCheckedChange={(checked) => handleInputChange("privacyConsent", checked as boolean)}
-              className="mt-1"
+              className="mt-1 data-[state=checked]:bg-white data-[state=checked]:text-primary"
             />
-            <Label htmlFor="privacy" className="text-primary-foreground">
+            <Label htmlFor="privacy" className="text-white text-xs sm:text-sm">
               I agree to the Privacy Policy and consent to receive marketing emails from Excellence Media Group
             </Label>
           </div>
@@ -118,7 +119,7 @@ const MedicareForm = () => {
           type="submit"
           variant="cta"
           size="lg"
-          className="w-full text-lg font-bold py-4 mt-6"
+          className="w-full text-sm sm:text-base lg:text-lg font-bold py-3 sm:py-4 mt-4 sm:mt-6 bg-accent hover:bg-accent/90 text-black"
           disabled={!formData.consent || !formData.privacyConsent}
         >
           SPEAK to a LICENSED SALES AGENT
