@@ -99,7 +99,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Medicare Insurance coverage for your peace of mind.
                   </p>
-                  <Link to="/medicare">
+                  <Link to="/medicare" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
@@ -120,7 +120,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Drive with confidence, we've got you covered.
                   </p>
-                  <Link to="/auto-insurance">
+                  <Link to="/auto-insurance" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
@@ -141,7 +141,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Protecting your loved ones with comprehensive coverage.
                   </p>
-                  <Link to="/final-expense">
+                  <Link to="/final-expense" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
@@ -162,7 +162,7 @@ const Index = () => {
                   <p className="text-muted-foreground mb-4">
                     Specialized in finding the perfect ACA insurance plans.
                   </p>
-                  <Link to="/aca">
+                  <Link to="/aca" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
