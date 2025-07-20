@@ -83,7 +83,7 @@ const FinalExpense = () => {
                   Final Expense
                 </h1>
                 <p className="text-lg text-primary-foreground/90">
-                  Planning for final expenses is a crucial aspect of financial preparedness, and Reliance Covers is here to help you navigate this important area with ease and peace of mind. Our final expense insurance plans are specifically designed to cover the costs associated with funeral services, burial or cremation, medical bills, and other end-of-life expenses.
+                  Planning for final expenses is a crucial aspect of financial preparedness, and Trusti Covers is here to help you navigate this important area with ease and peace of mind. Our final expense insurance plans are specifically designed to cover the costs associated with funeral services, burial or cremation, medical bills, and other end-of-life expenses.
                 </p>
               </div>
               
@@ -158,7 +158,7 @@ const FinalExpense = () => {
                           onCheckedChange={(checked) => handleCheckboxChange("consent", checked as boolean)}
                         />
                         <Label htmlFor="consent" className="text-xs leading-tight">
-                          By checking this box and clicking the button below, I provide my signed written consent directly to Life Insurer Quote, Reliance Covers, and Excellence Media Group to call or text me about Final Expense and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent, even if my number is wireless, regardless of whether I am on any Federal or state DNC ('Do Not Call') list. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form).
+                          By checking this box and clicking the button below, I provide my signed written consent directly to Life Insurer Quote, Trusti Covers, and Excellence Media Group to call or text me about Final Expense and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent, even if my number is wireless, regardless of whether I am on any Federal or state DNC ('Do Not Call') list. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form).
                         </Label>
                       </div>
                       
@@ -196,10 +196,10 @@ const FinalExpense = () => {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                We understand that losing a loved one is an emotional and challenging time, and our goal is to alleviate the financial burden for your family during this difficult period. With Reliance Covers, you can ensure that your final expenses are taken care of, allowing your loved ones to focus on grieving and healing.
+                We understand that losing a loved one is an emotional and challenging time, and our goal is to alleviate the financial burden for your family during this difficult period. With Trusti Covers, you can ensure that your final expenses are taken care of, allowing your loved ones to focus on grieving and healing.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                One of the key advantages of choosing Reliance Covers for your final expense insurance is our commitment to personalized service and tailored coverage options. We understand that everyone's financial situation and preferences are unique, and we take the time to assess your specific needs and design a plan that meets your requirements. Our experienced agents will guide you through the process, explaining the available options and helping you select the coverage that best aligns with your wishes. We are dedicated to providing exceptional customer service, and we're always available to answer your questions and provide support.
+                One of the key advantages of choosing Trusti Covers for your final expense insurance is our commitment to personalized service and tailored coverage options. We understand that everyone's financial situation and preferences are unique, and we take the time to assess your specific needs and design a plan that meets your requirements. Our experienced agents will guide you through the process, explaining the available options and helping you select the coverage that best aligns with your wishes. We are dedicated to providing exceptional customer service, and we're always available to answer your questions and provide support.
               </p>
             </div>
 
@@ -209,10 +209,10 @@ const FinalExpense = () => {
               </h2>
               <div className="text-center space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  At Reliance Covers, we recognize that financial concerns should not add to the emotional burden of losing a loved one. Our final expense insurance plans are designed to be affordable and accessible, allowing you to secure the coverage you need without straining your budget. We work with a network of reputable insurance providers to offer competitive rates, ensuring that you receive comprehensive coverage at a price that fits your financial goals. With Reliance Covers, you can have peace of mind knowing that your final expenses will be taken care of, providing financial security for your loved ones when they need it most.
+                  At Trusti Covers, we recognize that financial concerns should not add to the emotional burden of losing a loved one. Our final expense insurance plans are designed to be affordable and accessible, allowing you to secure the coverage you need without straining your budget. We work with a network of reputable insurance providers to offer competitive rates, ensuring that you receive comprehensive coverage at a price that fits your financial goals. With Trusti Covers, you can have peace of mind knowing that your final expenses will be taken care of, providing financial security for your loved ones when they need it most.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  In summary, Reliance Covers is your trusted partner when it comes to final expense insurance. With our tailored coverage options, personalized service, and affordable rates, we make it easy for you to plan for the future and protect your loved ones from the financial burden of final expenses. Let us assist you in creating a comprehensive plan that brings peace of mind and allows your family to focus on healing and remembrance during a difficult time.
+                  In summary, Trusti Covers is your trusted partner when it comes to final expense insurance. With our tailored coverage options, personalized service, and affordable rates, we make it easy for you to plan for the future and protect your loved ones from the financial burden of final expenses. Let us assist you in creating a comprehensive plan that brings peace of mind and allows your family to focus on healing and remembrance during a difficult time.
                 </p>
               </div>
             </div>

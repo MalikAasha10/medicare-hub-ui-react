@@ -83,7 +83,7 @@ const ACA = () => {
                   ACA
                 </h1>
                 <p className="text-lg text-primary-foreground/90">
-                  When it comes to finding the right health insurance for your needs, Reliance Covers is the company to trust. We understand that access to quality healthcare is essential, and that's why we offer comprehensive and affordable health insurance plans that are fully compliant with the Affordable Care Act (ACA), often referred to as Obamacare. This ensures you receive robust coverage and the peace of mind that comes with knowing you're protected.
+                  When it comes to finding the right health insurance for your needs, Trusti Covers is the company to trust. We understand that access to quality healthcare is essential, and that's why we offer comprehensive and affordable health insurance plans that are fully compliant with the Affordable Care Act (ACA), often referred to as Obamacare. This ensures you receive robust coverage and the peace of mind that comes with knowing you're protected.
                 </p>
               </div>
 
@@ -158,7 +158,7 @@ const ACA = () => {
                           onCheckedChange={(checked) => handleCheckboxChange("consent", checked as boolean)}
                         />
                         <Label htmlFor="consent" className="text-xs leading-tight">
-                          By checking this box and clicking the button below, I provide my signed written consent directly to Reliance Covers and Excellence Media Group to call or text me about ACA Health Insurance and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
+                          By checking this box and clicking the button below, I provide my signed written consent directly to Trusti Covers and Excellence Media Group to call or text me about ACA Health Insurance and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
                         </Label>
                       </div>
 
@@ -196,12 +196,12 @@ const ACA = () => {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Our team of experienced insurance professionals is dedicated to ensuring that you receive the coverage you need at a price that fits your budget. For your health insurance needs, Reliance Covers has the perfect solution that aligns with the Affordable Care Act (ACA), also known as Obamacare.
+                Our team of experienced insurance professionals is dedicated to ensuring that you receive the coverage you need at a price that fits your budget. For your health insurance needs, Trusti Covers has the perfect solution that aligns with the Affordable Care Act (ACA), also known as Obamacare.
 
 
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                One of the key reasons to choose Reliance Covers for your ACA health insurance needs is our commitment to providing excellent customer service. We believe in building long-lasting relationships with our clients, and that starts with personalized attention and support. Our knowledgeable agents take the time to understand your specific requirements and guide you through the process of selecting the right ACA-compliant coverage options. We're always available to answer your questions, address your concerns, and provide expert advice on navigating the ACA. With Reliance Covers, you can trust that you'll receive the highest level of customer care throughout your health insurance journey.
+                One of the key reasons to choose Trusti Covers for your ACA health insurance needs is our commitment to providing excellent customer service. We believe in building long-lasting relationships with our clients, and that starts with personalized attention and support. Our knowledgeable agents take the time to understand your specific requirements and guide you through the process of selecting the right ACA-compliant coverage options. We're always available to answer your questions, address your concerns, and provide expert advice on navigating the ACA. With Trusti Covers, you can trust that you'll receive the highest level of customer care throughout your health insurance journey.
               </p>
             </div>
 
@@ -211,10 +211,10 @@ const ACA = () => {
               </h2>
               <div className="text-center space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  At Reliance Covers, we pride ourselves on offering competitive rates for ACA health insurance without compromising on the quality of coverage. We understand that health insurance can be a significant expense, and our goal is to make ACA-compliant plans as affordable as possible for our clients. Through the Health Insurance Marketplace, we can help you compare multiple options to find the best rates available, often leveraging Premium Tax Credits and Cost-Sharing Reductions to lower your out-of-pocket costs. Additionally, our team is skilled at identifying potential discounts and savings opportunities that the ACA provides, helping you maximize your benefits. By choosing Reliance Covers, you can have confidence that you're getting exceptional, comprehensive ACA coverage at a price that won't break the bank.
+                  At Trusti Covers, we pride ourselves on offering competitive rates for ACA health insurance without compromising on the quality of coverage. We understand that health insurance can be a significant expense, and our goal is to make ACA-compliant plans as affordable as possible for our clients. Through the Health Insurance Marketplace, we can help you compare multiple options to find the best rates available, often leveraging Premium Tax Credits and Cost-Sharing Reductions to lower your out-of-pocket costs. Additionally, our team is skilled at identifying potential discounts and savings opportunities that the ACA provides, helping you maximize your benefits. By choosing Trusti Covers, you can have confidence that you're getting exceptional, comprehensive ACA coverage at a price that won't break the bank.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  In summary, Reliance Covers stands out as a trusted provider of ACA health insurance due to our comprehensive and affordable coverage options, unwavering commitment to excellent customer service, and ability to offer competitive rates. With us, you can access the essential health benefits mandated by the Affordable Care Act, and enjoy the peace of mind that comes with knowing you have reliable, compliant health insurance coverage.
+                  In summary, Trusti Covers stands out as a trusted provider of ACA health insurance due to our comprehensive and affordable coverage options, unwavering commitment to excellent customer service, and ability to offer competitive rates. With us, you can access the essential health benefits mandated by the Affordable Care Act, and enjoy the peace of mind that comes with knowing you have reliable, compliant health insurance coverage.
                 </p>
               </div>
             </div>

@@ -83,7 +83,7 @@ const AutoInsurance = () => {
                   Auto Insurance
                 </h1>
                 <p className="text-lg text-primary-foreground/90">
-                  When it comes to finding the right auto insurance for your needs, Reliance Covers is the company to trust. We understand that protecting your vehicle is essential, and that's why we offer comprehensive and affordable auto insurance plans that provide you with peace of mind on the road.
+                  When it comes to finding the right auto insurance for your needs, Trusti Covers is the company to trust. We understand that protecting your vehicle is essential, and that's why we offer comprehensive and affordable auto insurance plans that provide you with peace of mind on the road.
                 </p>
               </div>
               
@@ -158,7 +158,7 @@ const AutoInsurance = () => {
                           onCheckedChange={(checked) => handleCheckboxChange("consent", checked as boolean)}
                         />
                         <Label htmlFor="consent" className="text-xs leading-tight">
-                          By checking this box and clicking the button below, I provide my signed written consent directly to Reliance Covers and Excellence Media Group to call or text me about Auto Insurance and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
+                          By checking this box and clicking the button below, I provide my signed written consent directly to Trusti Covers and Excellence Media Group to call or text me about Auto Insurance and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
                         </Label>
                       </div>
                       
@@ -196,10 +196,10 @@ const AutoInsurance = () => {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Our team of experienced insurance professionals is dedicated to ensuring that you receive the coverage you need at a price that fits your budget. Whether you're a new driver or have years of driving experience, Reliance Covers has the perfect auto insurance solution for you.
+                Our team of experienced insurance professionals is dedicated to ensuring that you receive the coverage you need at a price that fits your budget. Whether you're a new driver or have years of driving experience, Trusti Covers has the perfect auto insurance solution for you.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                One of the key reasons to choose Reliance Covers for your auto insurance needs is our commitment to providing excellent customer service. We believe in building long-lasting relationships with our clients, and that starts with personalized attention and support. Our knowledgeable agents take the time to understand your specific requirements and guide you through the process of selecting the right coverage options. We're always available to answer your questions, address your concerns, and provide expert advice. With Reliance Covers, you can trust that you'll receive the highest level of customer care throughout your insurance journey.
+                One of the key reasons to choose Trusti Covers for your auto insurance needs is our commitment to providing excellent customer service. We believe in building long-lasting relationships with our clients, and that starts with personalized attention and support. Our knowledgeable agents take the time to understand your specific requirements and guide you through the process of selecting the right coverage options. We're always available to answer your questions, address your concerns, and provide expert advice. With Trusti Covers, you can trust that you'll receive the highest level of customer care throughout your insurance journey.
               </p>
             </div>
 
@@ -209,10 +209,10 @@ const AutoInsurance = () => {
               </h2>
               <div className="text-center space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  At Reliance Covers, we pride ourselves on offering competitive rates without compromising on the quality of coverage. We understand that auto insurance can be a significant expense, and our goal is to make it as affordable as possible for our clients. With our extensive network of insurance providers, we can compare multiple options to find the best rates available. Additionally, our team is skilled at identifying potential discounts and savings opportunities to help you maximize your insurance benefits. By choosing Reliance Covers, you can have confidence that you're getting exceptional coverage at a price that won't break the bank.
+                  At Trusti Covers, we pride ourselves on offering competitive rates without compromising on the quality of coverage. We understand that auto insurance can be a significant expense, and our goal is to make it as affordable as possible for our clients. With our extensive network of insurance providers, we can compare multiple options to find the best rates available. Additionally, our team is skilled at identifying potential discounts and savings opportunities to help you maximize your insurance benefits. By choosing Trusti Covers, you can have confidence that you're getting exceptional coverage at a price that won't break the bank.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  In summary, Reliance Covers stands out as a trusted provider of auto insurance due to our comprehensive and affordable coverage options, commitment to excellent customer service, and ability to offer competitive rates. With us, you can protect your vehicle and enjoy the peace of mind that comes with knowing you have reliable insurance coverage.
+                  In summary, Trusti Covers stands out as a trusted provider of auto insurance due to our comprehensive and affordable coverage options, commitment to excellent customer service, and ability to offer competitive rates. With us, you can protect your vehicle and enjoy the peace of mind that comes with knowing you have reliable insurance coverage.
                 </p>
               </div>
             </div>

@@ -18,7 +18,7 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-1 sm:gap-2">
               <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
-              <span className="text-xs sm:text-sm">info@reliancecovers.com</span>
+              <span className="text-xs sm:text-sm">info@trusticovers.com</span>
             </div>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
@@ -35,7 +35,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/">
               <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">
-                Reliance Covers
+                Trusti Covers
               </h1>
             </Link>
           </div>
