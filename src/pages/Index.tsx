@@ -87,89 +87,89 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="group hover:shadow-form transition-shadow duration-300">
-              <CardContent className="p-0">
-                <img 
-                  src={medicareInsurance} 
-                  alt="Medicare Insurance" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Medicare Insurance</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Medicare Insurance coverage for your peace of mind.
-                  </p>
-                  <Link to="/medicare" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Link to="/medicare" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block">
+              <Card className="group hover:shadow-form transition-shadow duration-300 cursor-pointer h-full">
+                <CardContent className="p-0">
+                  <img 
+                    src={medicareInsurance} 
+                    alt="Medicare Insurance" 
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-3">Medicare Insurance</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Medicare Insurance coverage for your peace of mind.
+                    </p>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="group hover:shadow-form transition-shadow duration-300">
-              <CardContent className="p-0">
-                <img 
-                  src={autoInsurance} 
-                  alt="Auto Insurance" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Auto Insurance</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Drive with confidence, we've got you covered.
-                  </p>
-                  <Link to="/auto-insurance" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Link to="/auto-insurance" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block">
+              <Card className="group hover:shadow-form transition-shadow duration-300 cursor-pointer h-full">
+                <CardContent className="p-0">
+                  <img 
+                    src={autoInsurance} 
+                    alt="Auto Insurance" 
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-3">Auto Insurance</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Drive with confidence, we've got you covered.
+                    </p>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="group hover:shadow-form transition-shadow duration-300">
-              <CardContent className="p-0">
-                <img 
-                  src={finalExpense} 
-                  alt="Final Expense Insurance" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3">Final Expense</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Protecting your loved ones with comprehensive coverage.
-                  </p>
-                  <Link to="/final-expense" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Link to="/final-expense" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block">
+              <Card className="group hover:shadow-form transition-shadow duration-300 cursor-pointer h-full">
+                <CardContent className="p-0">
+                  <img 
+                    src={finalExpense} 
+                    alt="Final Expense Insurance" 
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-3">Final Expense</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Protecting your loved ones with comprehensive coverage.
+                    </p>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="group hover:shadow-form transition-shadow duration-300">
-              <CardContent className="p-0">
-                <img 
-                  src={acaInsurance} 
-                  alt="ACA Insurance" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3">ACA</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Specialized in finding the perfect ACA insurance plans.
-                  </p>
-                  <Link to="/aca" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Link to="/aca" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block">
+              <Card className="group hover:shadow-form transition-shadow duration-300 cursor-pointer h-full">
+                <CardContent className="p-0">
+                  <img 
+                    src={acaInsurance} 
+                    alt="ACA Insurance" 
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-3">ACA</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Specialized in finding the perfect ACA insurance plans.
+                    </p>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>

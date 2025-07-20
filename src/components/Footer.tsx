@@ -17,16 +17,16 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <div className="space-y-2">
-              <Link to="/medicare" className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
+              <Link to="/medicare" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
                 Medicare
               </Link>
-              <Link to="/auto-insurance" className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
+              <Link to="/auto-insurance" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
                 Auto Insurance
               </Link>
-              <Link to="/final-expense" className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
+              <Link to="/final-expense" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
                 Final Expense
               </Link>
-              <Link to="/aca" className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
+              <Link to="/aca" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block text-primary-foreground/90 hover:text-primary-foreground transition-colors text-sm">
                 ACA
               </Link>
             </div>
