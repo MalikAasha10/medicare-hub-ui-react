@@ -13,7 +13,7 @@ export const sendEmail = async (formData: Record<string, any>) => {
       EMAILJS_CONFIG.serviceId,
       EMAILJS_CONFIG.templateId,
       {
-        to_email: 'your-email@gmail.com',
+        to_email: 'noumanreal@gmail.com',
         ...formData,
       },
       EMAILJS_CONFIG.userId
