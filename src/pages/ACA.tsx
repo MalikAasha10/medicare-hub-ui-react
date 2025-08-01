@@ -6,8 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
+import { sendEmail, validateZipCode, validateEmail, validatePhone } from "@/lib/emailjs";
 
 const ACA = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,6 +21,7 @@ const ACA = () => {
     consent: false,
     emailConsent: false
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -27,45 +32,78 @@ const ACA = () => {
     setFormData(prev => ({ ...prev, [name]: checked }));
   };
 
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    else if (!validateEmail(formData.email)) newErrors.email = "Invalid email format";
+    if (!formData.phone.trim()) newErrors.phone = "Phone is required";
+    else if (!validatePhone(formData.phone)) newErrors.phone = "Invalid phone number";
+    if (!formData.zipCode.trim()) newErrors.zipCode = "Zip code is required";
+    else if (!validateZipCode(formData.zipCode)) newErrors.zipCode = "Zip code must contain only digits (5 or 9 digits)";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    try {
-      // Send email
-      const emailData = {
-        to: 'noumanreal@gmail.com',
-        subject: 'ACA Form Submission',
-        body: `
-          First Name: ${formData.firstName}
-          Last Name: ${formData.lastName}
-          Phone: ${formData.phone}
-          Email: ${formData.email}
-          Zip Code: ${formData.zipCode}
-          Consent: ${formData.consent ? 'Yes' : 'No'}
-          Email Consent: ${formData.emailConsent ? 'Yes' : 'No'}
-        `
-      };
-      
-      console.log("Form submitted:", emailData);
-      
-      // Clear form after successful submission
-      setFormData({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        zipCode: "",
-        consent: false,
-        emailConsent: false
+    if (!validateForm()) {
+      toast({
+        title: "Validation Error",
+        description: "Please fix the errors before submitting.",
+        variant: "destructive",
       });
-      
-      // Scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      
-      alert('Form submitted successfully!');
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const result = await sendEmail({
+        form_type: 'ACA Insurance Form',
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        phone: formData.phone,
+        email: formData.email,
+        zip_code: formData.zipCode,
+        consent_to_contact: formData.consent ? 'Yes' : 'No',
+        agree_to_privacy_policy: formData.emailConsent ? 'Yes' : 'No',
+      });
+
+      if (result.success) {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          zipCode: "",
+          consent: false,
+          emailConsent: false
+        });
+        setErrors({});
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        toast({
+          title: "Success!",
+          description: "Your ACA insurance form has been submitted successfully. We'll contact you soon!",
+        });
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error submitting form. Please try again.');
+      toast({
+        title: "Error",
+        description: "Failed to submit form. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -178,9 +216,9 @@ const ACA = () => {
                       type="submit" 
                       variant="cta" 
                       className="w-full"
-                      disabled={!formData.consent || !formData.emailConsent}
+                      disabled={!formData.consent || !formData.emailConsent || isSubmitting}
                     >
-                      Get My ACA
+                      {isSubmitting ? "Submitting..." : "Get My ACA"}
                     </Button>
                   </form>
                 </CardContent>

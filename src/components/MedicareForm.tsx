@@ -3,9 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Calendar } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+import { sendEmail, validateZipCode, validateEmail, validatePhone } from "@/lib/emailjs";
 
 const MedicareForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     zipCode: "",
@@ -15,46 +18,82 @@ const MedicareForm = () => {
     consent: false,
     privacyConsent: false,
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    else if (!validateEmail(formData.email)) newErrors.email = "Invalid email format";
+    if (!formData.phone.trim()) newErrors.phone = "Phone is required";
+    else if (!validatePhone(formData.phone)) newErrors.phone = "Invalid phone number";
+    if (!formData.zipCode.trim()) newErrors.zipCode = "Zip code is required";
+    else if (!validateZipCode(formData.zipCode)) newErrors.zipCode = "Zip code must contain only digits (5 or 9 digits)";
+    if (!formData.dob) newErrors.dob = "Date of birth is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    try {
-      // Send email
-      const emailData = {
-        to: 'noumanreal@gmail.com',
-        subject: 'Medicare Form Submission',
-        body: `
-          Name: ${formData.name}
-          Zip Code: ${formData.zipCode}
-          Email: ${formData.email}
-          Phone: ${formData.phone}
-          Date of Birth: ${formData.dob}
-          Consent: ${formData.consent ? 'Yes' : 'No'}
-          Privacy Consent: ${formData.privacyConsent ? 'Yes' : 'No'}
-        `
-      };
-      
-      console.log("Form submitted:", emailData);
-      
-      // Clear form after successful submission
-      setFormData({
-        name: "",
-        zipCode: "",
-        email: "",
-        phone: "",
-        dob: "",
-        consent: false,
-        privacyConsent: false,
+    if (!validateForm()) {
+      toast({
+        title: "Validation Error",
+        description: "Please fix the errors before submitting.",
+        variant: "destructive",
       });
-      
-      // Scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      
-      alert('Form submitted successfully!');
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const result = await sendEmail({
+        form_type: 'Medicare Form',
+        full_name: formData.name,
+        zip_code: formData.zipCode,
+        email: formData.email,
+        phone: formData.phone,
+        dob: formData.dob,
+        consent_to_contact: formData.consent ? 'Yes' : 'No',
+        agree_to_privacy_policy: formData.privacyConsent ? 'Yes' : 'No',
+      });
+
+      if (result.success) {
+        // Clear form after successful submission
+        setFormData({
+          name: "",
+          zipCode: "",
+          email: "",
+          phone: "",
+          dob: "",
+          consent: false,
+          privacyConsent: false,
+        });
+        setErrors({});
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        toast({
+          title: "Success!",
+          description: "Your Medicare form has been submitted successfully. We'll contact you soon!",
+        });
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error submitting form. Please try again.');
+      toast({
+        title: "Error",
+        description: "Failed to submit form. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -73,9 +112,10 @@ const MedicareForm = () => {
             placeholder="Your Name (Required)"
             value={formData.name}
             onChange={(e) => handleInputChange("name", e.target.value)}
-            className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
+            className={`bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12 ${errors.name ? 'border-red-500' : ''}`}
             required
           />
+          {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
         </div>
 
         <div>
@@ -84,9 +124,10 @@ const MedicareForm = () => {
             placeholder="Zip Code (Required)"
             value={formData.zipCode}
             onChange={(e) => handleInputChange("zipCode", e.target.value)}
-            className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
+            className={`bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12 ${errors.zipCode ? 'border-red-500' : ''}`}
             required
           />
+          {errors.zipCode && <p className="text-red-500 text-xs mt-1">{errors.zipCode}</p>}
         </div>
 
         <div>
@@ -95,9 +136,10 @@ const MedicareForm = () => {
             placeholder="Email Address (Required)"
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
-            className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
+            className={`bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12 ${errors.email ? 'border-red-500' : ''}`}
             required
           />
+          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
         </div>
 
         <div>
@@ -106,9 +148,10 @@ const MedicareForm = () => {
             placeholder="Phone Number (Required)"
             value={formData.phone}
             onChange={(e) => handleInputChange("phone", e.target.value)}
-            className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
+            className={`bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12 ${errors.phone ? 'border-red-500' : ''}`}
             required
           />
+          {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
         </div>
 
         <div>
@@ -119,10 +162,11 @@ const MedicareForm = () => {
               placeholder="mm/dd/yyyy"
               value={formData.dob}
               onChange={(e) => handleInputChange("dob", e.target.value)}
-              className="bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12"
+              className={`bg-white text-foreground border-border w-full text-sm sm:text-base h-10 sm:h-12 ${errors.dob ? 'border-red-500' : ''}`}
               required
             />
           </div>
+          {errors.dob && <p className="text-red-500 text-xs mt-1">{errors.dob}</p>}
         </div>
 
         <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
@@ -156,9 +200,9 @@ const MedicareForm = () => {
           variant="cta"
           size="lg"
           className="w-full text-sm sm:text-base lg:text-lg font-bold py-3 sm:py-4 mt-4 sm:mt-6 bg-accent hover:bg-accent/90 text-black"
-          disabled={!formData.consent || !formData.privacyConsent}
+          disabled={!formData.consent || !formData.privacyConsent || isSubmitting}
         >
-          SPEAK to a LICENSED SALES AGENT
+          {isSubmitting ? "Submitting..." : "SPEAK to a LICENSED SALES AGENT"}
         </Button>
       </form>
     </div>
