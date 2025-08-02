@@ -1,10 +1,11 @@
+
 import emailjs from 'emailjs-com';
 
-// EmailJS configuration
+// EmailJS configuration - REPLACE THESE WITH YOUR ACTUAL EMAILJS CREDENTIALS
 export const EMAILJS_CONFIG = {
-  serviceId: 'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-  templateId: 'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-  userId: 'YOUR_USER_ID', // Replace with your EmailJS user ID
+  serviceId: 'service_xxxxxxx', // Replace with your EmailJS service ID from https://dashboard.emailjs.com/admin
+  templateId: 'template_xxxxxxx', // Replace with your EmailJS template ID from https://dashboard.emailjs.com/admin
+  userId: 'user_xxxxxxxxxxxxxxxxx', // Replace with your EmailJS public key from https://dashboard.emailjs.com/admin/account
 };
 
 export const sendEmail = async (formData: Record<string, any>) => {
