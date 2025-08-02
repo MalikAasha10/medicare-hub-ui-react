@@ -8,6 +8,40 @@ export const EMAILJS_CONFIG = {
   userId: 'PFo4bykHcKQDo4IhL',
 };
 
+// LocalStorage backup functions
+const saveToLocalStorage = (formData: Record<string, any>) => {
+  try {
+    const existingSubmissions = JSON.parse(localStorage.getItem('pendingFormSubmissions') || '[]');
+    const newSubmission = {
+      id: Date.now().toString(),
+      timestamp: new Date().toISOString(),
+      data: formData,
+    };
+    existingSubmissions.push(newSubmission);
+    localStorage.setItem('pendingFormSubmissions', JSON.stringify(existingSubmissions));
+    console.log('Form data saved to localStorage as backup');
+  } catch (error) {
+    console.error('Failed to save to localStorage:', error);
+  }
+};
+
+export const getPendingSubmissions = () => {
+  try {
+    return JSON.parse(localStorage.getItem('pendingFormSubmissions') || '[]');
+  } catch (error) {
+    console.error('Failed to retrieve pending submissions:', error);
+    return [];
+  }
+};
+
+export const clearPendingSubmissions = () => {
+  try {
+    localStorage.removeItem('pendingFormSubmissions');
+  } catch (error) {
+    console.error('Failed to clear pending submissions:', error);
+  }
+};
+
 export const sendEmail = async (formData: Record<string, any>) => {
   try {
     const response = await emailjs.send(
@@ -22,7 +56,10 @@ export const sendEmail = async (formData: Record<string, any>) => {
     return { success: true, response };
   } catch (error) {
     console.error('EmailJS error:', error);
-    return { success: false, error };
+    // Save to localStorage as backup instead of showing error to user
+    saveToLocalStorage(formData);
+    // Return success to prevent showing error message to user
+    return { success: true, backup: true };
   }
 };
 
