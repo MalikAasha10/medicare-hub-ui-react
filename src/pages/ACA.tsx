@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { sendEmail, validateZipCode, validateEmail, validatePhone } from "@/lib/emailjs";
 
 const ACA = () => {
@@ -138,8 +138,10 @@ const ACA = () => {
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleInputChange}
+                          className={errors.firstName ? 'border-red-500' : ''}
                           required
                         />
+                        {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
                       </div>
                       <div>
                         <Label htmlFor="lastName">Last Name</Label>
@@ -148,8 +150,10 @@ const ACA = () => {
                           name="lastName"
                           value={formData.lastName}
                           onChange={handleInputChange}
+                          className={errors.lastName ? 'border-red-500' : ''}
                           required
                         />
+                        {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
                       </div>
                     </div>
 
@@ -161,8 +165,10 @@ const ACA = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
+                        className={errors.phone ? 'border-red-500' : ''}
                         required
                       />
+                      {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                     </div>
 
                     <div>
@@ -173,8 +179,10 @@ const ACA = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleInputChange}
+                        className={errors.email ? 'border-red-500' : ''}
                         required
                       />
+                      {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                     </div>
 
                     <div>
@@ -184,8 +192,10 @@ const ACA = () => {
                         name="zipCode"
                         value={formData.zipCode}
                         onChange={handleInputChange}
+                        className={errors.zipCode ? 'border-red-500' : ''}
                         required
                       />
+                      {errors.zipCode && <p className="text-red-500 text-xs mt-1">{errors.zipCode}</p>}
                     </div>
 
                     <div className="space-y-3">

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -6,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Phone } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { sendEmail, validateEmail, validatePhone } from "@/lib/emailjs";
 
 const ContactUs = () => {
@@ -248,6 +249,7 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
