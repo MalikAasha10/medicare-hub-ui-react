@@ -3,9 +3,9 @@ import emailjs from 'emailjs-com';
 
 // EmailJS configuration
 export const EMAILJS_CONFIG = {
-  serviceId: 'service_odz7s8j', // Replace with your EmailJS service ID
-  templateId: 'template_vh435cv', // Replace with your EmailJS template ID
-  userId: 'PFo4bykHcKQDo4IhL', // Replace with your EmailJS user ID
+  serviceId: 'service_odz7s8j',
+  templateId: 'template_vh435cv',
+  userId: 'PFo4bykHcKQDo4IhL',
 };
 
 export const sendEmail = async (formData: Record<string, any>) => {
