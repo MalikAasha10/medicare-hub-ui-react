@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { sendEmail, validateZipCode, validateEmail, validatePhone } from "@/lib/emailjs";
 
 const FinalExpense = () => {
@@ -150,8 +150,10 @@ const FinalExpense = () => {
                           name="lastName"
                           value={formData.lastName}
                           onChange={handleInputChange}
+                          className={errors.lastName ? 'border-red-500' : ''}
                           required
                         />
+                        {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
                       </div>
                     </div>
                     
@@ -163,8 +165,10 @@ const FinalExpense = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
+                        className={errors.phone ? 'border-red-500' : ''}
                         required
                       />
+                      {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                     </div>
                     
                     <div>
@@ -175,8 +179,10 @@ const FinalExpense = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleInputChange}
+                        className={errors.email ? 'border-red-500' : ''}
                         required
                       />
+                      {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                     </div>
                     
                     <div>
@@ -186,8 +192,10 @@ const FinalExpense = () => {
                         name="zipCode"
                         value={formData.zipCode}
                         onChange={handleInputChange}
+                        className={errors.zipCode ? 'border-red-500' : ''}
                         required
                       />
+                      {errors.zipCode && <p className="text-red-500 text-xs mt-1">{errors.zipCode}</p>}
                     </div>
                     
                     <div className="space-y-3">

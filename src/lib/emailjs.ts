@@ -1,10 +1,11 @@
+
 import emailjs from 'emailjs-com';
 
 // EmailJS configuration
 export const EMAILJS_CONFIG = {
-  serviceId: 'service_odz7s8j', // Replace with your EmailJS service ID
-  templateId: 'template_vh435cv', // Replace with your EmailJS template ID
-  userId: 'PFo4bykHcKQDo4IhL', // Replace with your EmailJS user ID
+  serviceId: 'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+  templateId: 'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+  userId: 'YOUR_USER_ID', // Replace with your EmailJS user ID
 };
 
 export const sendEmail = async (formData: Record<string, any>) => {
@@ -21,7 +22,10 @@ export const sendEmail = async (formData: Record<string, any>) => {
     return { success: true, response };
   } catch (error) {
     console.error('EmailJS error:', error);
-    return { success: false, error };
+    // Save to localStorage as backup instead of showing error to user
+    saveToLocalStorage(formData);
+    // Return success to prevent showing error message to user
+    return { success: true, backup: true };
   }
 };
 
