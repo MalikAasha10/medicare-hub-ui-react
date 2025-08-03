@@ -60,7 +60,7 @@ const Services = () => {
               Comprehensive Insurance Solutions for Peace of Mind
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Reliance Covers, we understand that life is full of unexpected twists and turns. That's why we are dedicated to providing comprehensive insurance solutions that offer our valued clients peace of mind. With our extensive range of insurance products and personalized services, we aim to protect what matters most to you, whether it's your vehicle, medicare, or final expense.
+              At Trusti Covers, we understand that life is full of unexpected twists and turns. That's why we are dedicated to providing comprehensive insurance solutions that offer our valued clients peace of mind. With our extensive range of insurance products and personalized services, we aim to protect what matters most to you, whether it's your vehicle, medicare, or final expense.
             </p>
             <br />
             <p className="text-lg text-muted-foreground leading-relaxed">
