@@ -62,9 +62,8 @@ const PrivacyPolicy = () => {
             </p>
 
             <h2 className="text-2xl font-bold mb-4 text-foreground">Website Ownership & Contact Information</h2>
-            <p className="mb-4">This website is owned and operated by Excellence Media Group. For any privacy-related concerns, you can contact us at:</p>
+            <p className="mb-4">This website is owned and operated by Trusti Covers . For any privacy-related concerns, you can contact us at:</p>
             <p className="mb-2">info@trusticovers.com</p>
-            {/* <p className="mb-6">noahhenrey@excellencemediagroup.com</p> */} /* Uncomment if needed */
           </div>
         </div>
       </section>

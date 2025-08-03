@@ -178,7 +178,8 @@ const MedicareForm = () => {
               className="mt-1 h-5 w-5 border-2 border-white bg-white data-[state=checked]:bg-primary data-[state=checked]:text-white data-[state=checked]:border-primary"
             />
             <Label htmlFor="consent" className="text-white leading-relaxed text-xs sm:text-sm">
-              By checking this box and clicking the button below, I provide my signed written consent directly to Trusti Covers and Excellence Media Group to call or text me about Medicare and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
+              By checking this box and clicking the button below, I provide my signed written consent directly to Trusti Covers call or 
+              text me about Medicare and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
             </Label>
           </div>
 
@@ -190,7 +191,7 @@ const MedicareForm = () => {
               className="mt-1 h-5 w-5 border-2 border-white bg-white data-[state=checked]:bg-primary data-[state=checked]:text-white data-[state=checked]:border-primary"
             />
             <Label htmlFor="privacy" className="text-white text-xs sm:text-sm">
-              I agree to the Privacy Policy and consent to receive marketing emails from Excellence Media Group
+              I agree to the Privacy Policy and consent to receive marketing emails from Trusti Covers. I understand that I can unsubscribe at any time.
             </Label>
           </div>
         </div>

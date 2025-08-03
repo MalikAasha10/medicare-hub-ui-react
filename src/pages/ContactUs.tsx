@@ -144,7 +144,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Call Us</h3>
-                    <p className="text-muted-foreground">+1 3137204214</p>
+                    <p className="text-muted-foreground">+1 947 129 8469</p>
                   </div>
                 </div>
               </div>

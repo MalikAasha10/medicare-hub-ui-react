@@ -206,7 +206,7 @@ const ACA = () => {
                           onCheckedChange={(checked) => handleCheckboxChange("consent", checked as boolean)}
                         />
                         <Label htmlFor="consent" className="text-xs leading-tight">
-                          By checking this box and clicking the button below, I provide my signed written consent directly to Trusti Covers and Excellence Media Group to call or text me about ACA Health Insurance and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
+                          By checking this box and clicking the button below, I provide my signed written consent directly to Trusti Covers to call or text me about ACA Health Insurance and related marketing offers at the number I provided above via manual or automated technology, including an autodialer and prerecorded or artificial voice (including AI), until such time that I revoke my consent. I understand that my consent is not a condition of purchase of any goods or services and that I may revoke my consent at any time. To proceed without providing consent, leave this box unchecked. I understand that standard message and data rates may apply. I also agree to the Terms and Conditions (which require arbitration of disputes, including any disputes with anyone who may contact me in conjunction with this form) that are linked near the bottom of the page. Even if it is a wireless number, regardless of whether you are on any Federal or state DNC ('Do Not Call').
                         </Label>
                       </div>
 
@@ -217,7 +217,7 @@ const ACA = () => {
                           onCheckedChange={(checked) => handleCheckboxChange("emailConsent", checked as boolean)}
                         />
                         <Label htmlFor="emailConsent" className="text-xs">
-                          I agree to the Privacy Policy and consent to receive marketing emails from Excellence Media Group.
+                          I agree to the Privacy Policy and consent to receive marketing emails from Trusti Covers.
                         </Label>
                       </div>
                     </div>

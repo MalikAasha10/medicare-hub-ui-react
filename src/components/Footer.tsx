@@ -37,7 +37,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Contact Information</h4>
             <div className="space-y-2 text-sm">
               <p className="text-primary-foreground/90">info@trusticovers.com</p>
-              <p className="text-primary-foreground/90">+1 3137204214</p>
+              <p className="text-primary-foreground/90">+1 947 129 8469</p>
               <p className="text-primary-foreground/90">SMID: MULTI-PLAN_SQKueBcR8p2025_C</p>
             </div>
           </div>

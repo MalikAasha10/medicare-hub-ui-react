@@ -76,7 +76,7 @@ const TermsAndConditions = () => {
 
             <h2 className="text-2xl font-bold mb-4 text-foreground">Binding Arbitration and Dispute Resolution</h2>
             <p className="mb-6">
-              By using this Site and providing your contact information, you agree that any dispute, claim, or controversy arising out of or relating to your use of the Site, the services provided by Trusti Covers and Excellence Media Group, or any communications you receive from us, shall be resolved through binding arbitration. This includes disputes arising from the Telephone Consumer Protection Act (TCPA), related marketing offers, and any alleged violations of federal or state "Do Not Call" (DNC) registries.
+              By using this Site and providing your contact information, you agree that any dispute, claim, or controversy arising out of or relating to your use of the Site, the services provided by Trusti Covers or any communications you receive from us, shall be resolved through binding arbitration. This includes disputes arising from the Telephone Consumer Protection Act (TCPA), related marketing offers, and any alleged violations of federal or state "Do Not Call" (DNC) registries.
             </p>
             <p className="mb-6">
               Arbitration shall be conducted by a neutral arbitrator and administered by the American Arbitration Association (AAA) in accordance with its rules. You waive your right to a trial by jury or to participate in a class-action lawsuit. The arbitration decision shall be final and binding, and judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction.
