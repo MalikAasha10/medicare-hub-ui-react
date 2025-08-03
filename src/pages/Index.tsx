@@ -28,7 +28,7 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center space-y-6">
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-              Execute happiness with Reliance Covers
+              Execute happiness with Trusti Covers
             </h1>
             <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
               With our personalized approach, insurance policies we recommend are tailored specifically to you.
@@ -52,7 +52,7 @@ const Index = () => {
                 You could save on your insurance policy
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                At Reliance Covers, we believe in providing our clients with peace of mind by offering reliable and comprehensive insurance quotes. With years of experience in the industry, we understand that every individual's needs are unique, which is why we strive to provide personalized insurance quotes tailored to fit our clients.
+                At Trusti Covers, we believe in providing our clients with peace of mind by offering reliable and comprehensive insurance quotes. With years of experience in the industry, we understand that every individual's needs are unique, which is why we strive to provide personalized insurance quotes tailored to fit our clients.
               </p>
               <p className="text-sm text-muted-foreground">
                 Not affiliated with the U.S. government
