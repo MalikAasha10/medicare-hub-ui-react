@@ -20,19 +20,19 @@ const Services = () => {
       title: "Auto Insurance",
       description: "Drive with confidence knowing that your vehicle and your finances are protected with our comprehensive auto insurance coverage.",
       image: autoImg,
-      link: "/contact-us"
+      link: "/auto-insurance"
     },
     {
       title: "Final Expense",
       description: "Ensure your loved ones are financially protected during difficult times with our compassionate final expense insurance options.",
       image: finalExpenseImg,
-      link: "/contact-us"
+      link: "/final-expense"
     },
     {
       title: "ACA",
       description: "Specialized in finding the perfect ACA insurance plans that meet your healthcare needs and budget requirements.",
       image: acaImg,
-      link: "/contact-us"
+      link: "/aca"
     }
   ];
 
@@ -81,30 +81,31 @@ const Services = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20">
-                <div className="aspect-video overflow-hidden rounded-t-lg">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                  <Link to={service.link}>
+              <Link key={index} to={service.link} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="block">
+                <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20 cursor-pointer h-full">
+                  <div className="aspect-video overflow-hidden rounded-t-lg">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <CardHeader className="pb-4">
+                    <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <CardDescription className="text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </CardDescription>
                     <Button variant="cta" className="w-full">
                       Get a Quote
                     </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
