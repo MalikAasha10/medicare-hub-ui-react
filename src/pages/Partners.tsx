@@ -75,7 +75,7 @@ const Partners = () => {
     "Citation Insurance Company", "MAPFRE Insurance Company of Florida", "Together Health", "Healthspire", 
     "Digital BGA", "Resource Connect", "TruBridge, Inc.", "Premier Insurance Benefits, LLC", "Northpointe Bank", 
     "Wyndham Capital Mortgage, Inc", "Next Gen Leads", "Elite Health Plus", "Health Caddies", "Shop RX Plans", 
-    "Western & Southern Financial", "Reliance First Capital, LLC", "PennyMac Loan Services, LLC", "American Senior Med", 
+    "Western & Southern Financial", "Trusti  First Capital, LLC", "PennyMac Loan Services, LLC", "American Senior Med", 
     "The Commerce Insurance Company", "Bright Idea Insurance Solutions, Inc.", "Total Insurance Brokers", 
     "United Health Advisers LLC", "Senior Coverage", "Anhelo Insurance Solutions LLC.", "Insurance Group", 
     "LoanSnap, Inc", "Zillow Home Loans, LLC", "National Health Plans", "Whoop Media", "Quantum Research", 
@@ -108,7 +108,7 @@ const Partners = () => {
               Strong Partnerships for Better Coverage
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              At Reliance Covers, we've established strong partnerships with leading insurance providers across the nation. These partnerships allow us to offer our clients access to a wide range of insurance products and competitive rates. Our network of trusted partners ensures that we can find the right coverage for your specific needs and budget.
+              At Trusti Covers, we've established strong partnerships with leading insurance providers across the nation. These partnerships allow us to offer our clients access to a wide range of insurance products and competitive rates. Our network of trusted partners ensures that we can find the right coverage for your specific needs and budget.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We work exclusively with A-rated insurance companies that have proven track records of financial stability and excellent customer service. This commitment to quality partnerships means you can trust that your coverage will be there when you need it most.
