@@ -13,7 +13,7 @@ const MedicareContent = () => {
 
       <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
         <p className="text-sm sm:text-base lg:text-lg text-foreground leading-relaxed mb-4 sm:mb-6">
-          When it comes to Medicare Health Insurance, Trusti Covers is your go-to provider. We understand the importance of having comprehensive healthcare coverage in your golden years, and that's why we offer a range of Medicare Health insurance quotes to suit your specific needs. Whether you're looking for Health Advantage, Health Supplement, we may help you get covered. Our experienced team of compliant agents is well-versed in the complexities of Health and will guide you through the process, ensuring you understand your options and can make informed decisions about your healthcare coverage.
+          When it comes to Medicare Health Insurance, Trusti Covers is your go-to provider. We understand the importance of having affordable healthcare coverage in your golden years, and that's why we offer a range of Medicare Health insurance quotes to suit your specific needs. Whether you're looking for Health Advantage, Health Supplement, we may help you get covered. Our experienced team of compliant agents is well-versed in the complexities of Health and will guide you through the process, ensuring you understand your options and can make informed decisions about your healthcare coverage.
         </p>
 
         <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4 sm:mb-6">
@@ -26,10 +26,11 @@ const MedicareContent = () => {
           Why Choose Medicare Health Insurance With Us
         </h2>
         <p className="text-sm sm:text-base text-foreground leading-relaxed">
-          At Trusti Covers, we recognize the importance of cost-effective healthcare solutions. We understand that medical expenses can be a significant burden, especially for seniors on fixed incomes. That's why we strive to offer Medicare Health insurance plans that provide comprehensive coverage at great rates. Our network of insurance providers allows us to compare multiple options and find great rates available. Additionally, our team is skilled at identifying potential savings and discounts, to help you maximize your health benefits while minimizing your out-of-pocket expenses. With Trusti Covers, you can have peace of mind knowing that you have reliable Medicare Health insurance coverage without breaking the bank.
+          At Trusti Covers, we recognize the importance of cost-effective healthcare solutions. We understand that medical expenses can be a significant burden, especially for seniors on fixed incomes. That's why we strive to offer Medicare Health insurance plans that provide 
+           coverage at great rates. Our network of insurance providers allows us to compare multiple options and find great rates available. Additionally, our team is skilled at identifying potential savings and discounts, to help you maximize your health benefits while minimizing your out-of-pocket expenses. With Trusti Covers, you can have peace of mind knowing that you have reliable Medicare Health insurance coverage without breaking the bank.
         </p>
         <p className="text-sm sm:text-base text-foreground leading-relaxed mt-4">
-          In summary, Trusti Covers is the trusted choice for Health insurance. With our range of comprehensive plans, personalized service, and commitment to affordability, we make it easy for you to navigate the complexities of Medicare Health Plans and secure the healthcare coverage you deserve. Let us help you make the most of your Medicare Health benefits and ensure that you have peace of mind when it comes to your healthcare needs.
+          In summary, Trusti Covers is the trusted choice for Health insurance. With our range of  plans, personalized service, and commitment to affordability, we make it easy for you to navigate the complexities of Medicare Health Plans and secure the healthcare coverage you deserve. Let us help you make the most of your Medicare Health benefits and ensure that you have peace of mind when it comes to your healthcare needs.
         </p>
       </div>
 

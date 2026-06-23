@@ -121,7 +121,7 @@ const AutoInsurance = () => {
                   Auto Insurance
                 </h1>
                 <p className="text-lg text-primary-foreground/90">
-                  When it comes to finding the right auto insurance for your needs, Trusti Covers is the company to trust. We understand that protecting your vehicle is essential, and that's why we offer comprehensive and affordable auto insurance plans that provide you with peace of mind on the road.
+                  When it comes to finding the right auto insurance for your needs, Trusti Covers is the company to trust. We understand that protecting your vehicle is essential, and that's why we offer  affordable auto insurance plans that provide you with peace of mind on the road.
                 </p>
               </div>
               
@@ -260,7 +260,7 @@ const AutoInsurance = () => {
                   At Trusti Covers, we pride ourselves on offering competitive rates without compromising on the quality of coverage. We understand that auto insurance can be a significant expense, and our goal is to make it as affordable as possible for our clients. With our extensive network of insurance providers, we can compare multiple options to find the best rates available. Additionally, our team is skilled at identifying potential discounts and savings opportunities to help you maximize your insurance benefits. By choosing Trusti Covers, you can have confidence that you're getting exceptional coverage at a price that won't break the bank.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  In summary, Trusti Covers stands out as a trusted provider of auto insurance due to our comprehensive and affordable coverage options, commitment to excellent customer service, and ability to offer competitive rates. With us, you can protect your vehicle and enjoy the peace of mind that comes with knowing you have reliable insurance coverage.
+                  In summary, Trusti Covers stands out as a trusted provider of auto insurance due to our  affordable coverage options, commitment to excellent customer service, and ability to offer competitive rates. With us, you can protect your vehicle and enjoy the peace of mind that comes with knowing you have reliable insurance coverage.
                 </p>
               </div>
             </div>
