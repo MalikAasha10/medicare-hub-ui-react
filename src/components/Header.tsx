@@ -15,10 +15,13 @@ const Header = () => {
             <div className="flex items-center gap-1 sm:gap-2">
               <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
               <span className="text-xs sm:text-sm">+1 947 129 8469</span>
+              <span className="text-xs sm:text-sm">(TTY: 711)</span>
+              <span className="text-xs sm:text-sm">Mon–Sun 8AM–8PM ET</span>
             </div>
             <div className="flex items-center gap-1 sm:gap-2">
               <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
               <span className="text-xs sm:text-sm">info@trusticovers.com</span>
+              
             </div>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
@@ -33,11 +36,15 @@ const Header = () => {
       <div className="bg-background border-b border-border py-2 sm:py-4 px-2 sm:px-4 shadow-soft">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <Link to="/">
-              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">
-                Trusti Covers
-              </h1>
-            </Link>
+        <Link to="/" className="block">
+  <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary">
+    Trusti Covers
+  </h1>
+  <p className="text-xs  font-medium">
+    This is a non-government entity.
+  </p>
+</Link>
+          
           </div>
 
           <nav className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">

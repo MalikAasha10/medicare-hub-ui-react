@@ -170,7 +170,21 @@ const MedicareForm = () => {
         </div>
 
         <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
+       <div className="rounded-lg border border-white/20 bg-white/10 p-3 sm:p-4">
+  <p className="text-white/90 text-xs sm:text-sm leading-relaxed">
+    Enrollment in a Medicare plan may be limited to certain times of the year
+    unless you qualify for a Special Enrollment Period (SEP). Contact Medicare
+    at <span className="font-medium">1-800-MEDICARE (1-800-633-4227)</span>,
+    24 hours a day, 7 days a week, or TTY
+    <span className="font-medium"> 1-877-486-2048 </span>
+    if you are hearing impaired.
+  </p>
+</div>
+
+
           <div className="flex items-start space-x-2 sm:space-x-3">
+    
+          
             <Checkbox
               id="consent"
               checked={formData.consent}
